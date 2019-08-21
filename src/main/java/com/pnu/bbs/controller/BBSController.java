@@ -37,31 +37,10 @@ public class BBSController {
 	public String ajax() {
 		return "ajax";
 	}
-	@RequestMapping("/ajaxdata.bbs")
-	public String ajaxdata() {
-		return "ajaxdata";
-	}
 	
 	@RequestMapping("/mlist.bbs")
 	public String mlist() {
 		return "mlist";
-	}
-
-	// 글쓰기 작성 버튼
-	@PostMapping(value = "/write.bbs")
-	public String write(BBSDto article, @RequestPart("fname") List<MultipartFile> fileList) {
-		article.setId("ID");
-		System.out.println(article.getContent());
-		bbsService.write(article);
-		return "redirect:/list.bbs"; // 다시 그전 게시판으로로 돌아감
-	}
-
-	@RequestMapping(value = "/content.bbs")
-	// @RequestParam : 요청한놈이 가져온 파라미터 값 ,,, 이름이 같으면 생략가능
-	public String content(@RequestParam int articleNum, Model model) {
-		model.addAttribute("article", bbsService.content(articleNum));
-		// model.addAttribute("pageNum", pageNum);
-		return "content";
 	}
 
 	// -> service로

@@ -31,21 +31,6 @@ public class BBSDaoImpl implements BBSDao {
 	// 조건) DTO와 테이블의 변수명이같으면
 	
 
-	@Override
-	public void write(BBSDto article){
-		sqlSession.insert(nameSpace +".write", article);
-	}
-	
-	@Override
-	public BBSDto content(int articleNum) {
-		return sqlSession.selectOne(nameSpace+".content", articleNum);
-		// sqlSession 중 하나를 받아온다. ~밑에 있는 아이디 값이 content인 친구를,,, 넘어가는 파라미터는 articleNum
-	}
-
-	@Override
-	public void upHit(int articleNum) {
-		sqlSession.update(nameSpace+".upHit",articleNum);
-	}
 
 
 }

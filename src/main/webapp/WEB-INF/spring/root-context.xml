@@ -23,7 +23,6 @@
 		<property name="dataSource" ref= "dataSource"/>
 	</bean>
 	
-	
 	<!-- setDatasource메소드는 datasource를 받는다 -->
 	<bean id = "sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
 		<property name = "dataSource" ref="dataSource" />

@@ -8,7 +8,4 @@ import com.pnu.bbs.dto.BBSDto;
 public interface BBSDao {
 	public List<BBSDto> list(String dong);
 	public List<Map<String, Object>> selectMemberList();
-	public void write(BBSDto article);
-	public BBSDto content(int articleNum);
-	public void upHit(int articleNum);
 }

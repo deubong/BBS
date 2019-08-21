@@ -20,8 +20,6 @@
 		<typeAlias type="com.pnu.bbs.dto.BBSDto" alias="article"/>
 	</typeAliases>
 	
-	
-
 </configuration>
 	
 	

@@ -160,7 +160,7 @@
 							 var option = "<option value='" + memberList[i].DONG + "'>" + memberList[i].DONG + "</option>";
 							 $('#dong').append(option);
 							}
-						}
+						} 
 					}
 				});
 			 });

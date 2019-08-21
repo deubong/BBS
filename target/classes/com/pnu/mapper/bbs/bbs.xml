@@ -23,30 +23,4 @@
 			]]>
 	</select>
 
-	<!-- useGeneratedKeys="true" : Mybatis에서 auto increment 사용 // keyProperty 
-		: 그 컬럼 값 -->
-	<!-- 게시글 등록 -->
-	<insert id="write" parameterType="article">
-		INSERT INTO BBS
-		VALUES(bbs_seq.nextval,#{id},#{title},#{content},0,SYSDATE)
-	</insert>
-
-	<!-- 글 읽기 -->
-	<!-- 받아 들이는 값 내보내는 값 -->
-	<select id="content" parameterType="int" resultType="article">
-		SELECT *
-		FROM BBS
-		WHERE articleNum= #{articleNum}
-	</select>
-
-	<update id="upHit" parameterType="int">
-		UPDATE BBS
-		SET HIT = HIT +
-		1
-		WHERE articleNum= #{articleNum}
-	</update>
-
-
-
-
 </mapper>
